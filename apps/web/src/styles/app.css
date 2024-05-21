@@ -1,0 +1,60 @@
+@import './vendors/vime-player.css';
+@import './base/base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'primary-family';
+		font-style: 'normal';
+		font-weight: 400;
+		font-display: optional;
+		src: url(/fonts/primary-400.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'primary-family';
+		font-style: 'italic';
+		font-weight: 400;
+		font-display: optional;
+		src: url(/fonts/primary-400-italic.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'primary-family';
+		font-style: 'normal';
+		font-weight: 700;
+		font-display: optional;
+		src: url(/fonts/primary-700.woff2) format('woff2');
+	}
+	@font-face {
+		font-family: 'primary-family';
+		font-style: 'italic';
+		font-weight: 700;
+		font-display: optional;
+		src: url(/fonts/primary-700-italic.woff2) format('woff2');
+	}
+}
+
+@layer utilities {
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	.heightScreenFix {
+		height: 100vh;
+		/* mobile viewport bug fix */
+		height: -webkit-fill-available;
+	}
+
+	.minHeightScreenFix {
+		min-height: 100vh;
+		/* mobile viewport bug fix */
+		min-height: -webkit-fill-available;
+	}
+}

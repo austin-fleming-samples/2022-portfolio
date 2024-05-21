@@ -1,0 +1,28 @@
+{
+  "extends": "./../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "target": "ES6",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@modules/*": [
+        "src/modules/*"
+      ],
+      "@common/*": [
+        "src/common/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "./.eslintrc.js",
+    "./jest.config.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
